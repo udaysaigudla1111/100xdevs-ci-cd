@@ -22,5 +22,8 @@ jobs:
           key: ${{ secrets.SSH_SECRET_KEY }}
           port: 22
           script: |
-            ls
+            cd 100xdevs-ci-cd
+            git pull origin master
+            npm install
+            npm run dev
     
